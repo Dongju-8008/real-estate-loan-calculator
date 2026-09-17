@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta name="google-site-verification" content="waKLHzvkqoZLIZOYjoVfv0mB3oohdmlmsDgfQASABsU" />
-  <meta name="naver-site-verification" content="e860bf47cdd384e4526a22f240c0f790ff314e46" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2429123210227554"
-     crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>대한민국 부동산 대출 & 정책금융 종합 계산기 (DSR·LTV·디딤돌·신생아특례)</title>
+
+  <!-- 사이트 소유권 인증 -->
+  <meta name="google-site-verification" content="waKLHzvkqoZLIZOYjoVfv0mB3oohdmlmsDgfQASABsU" />
+  <meta name="naver-site-verification" content="e860bf47cdd384e4526a22f240c0f790ff314e46" />
+
+  <!-- 구글 애드센스 공식 스크립트 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2429123210227554" crossorigin="anonymous"></script>
+
+  <!-- 검색엔진 SEO 최적화 메타태그 -->
+  <title>홈파인더 | 부동산 대출 계산기 - 스트레스 DSR·디딤돌·신생아특례 한도 조회</title>
+  <meta name="description" content="홈파인더(HomeFinder) 부동산 대출 계산기. 스트레스 DSR 2단계, 규제지역 LTV 완벽 반영! 생애최초, 신혼부부 맞춤 디딤돌·신생아특례 대출 한도와 월 상환액을 즉시 무료로 계산해보세요.">
+  <meta name="keywords" content="홈파인더, 홈파인더 대출계산기, 부동산 대출 계산기, DSR 계산기, 스트레스 DSR 2단계, 주택담보대출 한도, 디딤돌 대출 조건, 신생아 특례 대출, 생애최초 주담대">
   
-  <meta name="description" content="2026년 최신 부동산 대출 한도 계산기. 스트레스 DSR 2단계, 지역별 LTV, 디딤돌·신생아특례·보금자리론 정책 대출 자격 진단 및 상환 스케줄을 무료로 계산하세요.">
-  <meta name="keywords" content="부동산 대출 계산기, DSR 계산기, 스트레스 DSR, 주택담보대출 한도, 디딤돌 대출 조건, 신생아 특례대출, LTV 계산, 보금자리론">
-  <meta property="og:title" content="대한민국 부동산 대출 & 정책금융 종합 계산기">
-  <meta property="og:description" content="DSR 40%, 스트레스 금리, 규제지역 LTV 및 정부 정책모기지 적격 여부를 한 번에 진단">
+  <!-- SNS 공유 미리보기 (Open Graph) -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="홈파인더 (HomeFinder)">
+  <meta property="og:title" content="홈파인더 - 부동산 대출 & 스트레스 DSR 계산기">
+  <meta property="og:description" content="내 소득과 규제지역에 맞는 최대 대출 한도와 정부 정책 모기지(디딤돌, 신생아특례) 적격 여부를 1초 만에 확인하세요.">
+  <meta property="og:url" content="https://real-estate-loan-calculator.vercel.app/">
 
-  <!-- Google AdSense Script (발급받은 ca-pub 코드로 치환하세요) -->
-  <!-- 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> 
-  -->
-
+  <!-- 스타일 및 차트 라이브러리 -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -50,34 +54,15 @@
   </script>
 
   <style>
-    /* Custom scrollbar and animations */
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f1f5f9;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
-      border-radius: 9999px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #94a3b8;
-    }
-    .slider-thumb::-webkit-slider-thumb {
-      appearance: none;
-      height: 18px;
-      width: 18px;
-      border-radius: 50%;
-      background: #2563eb;
-      cursor: pointer;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen">
 
+  <!-- Header -->
   <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
@@ -86,47 +71,43 @@
         </div>
         <div>
           <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center gap-2">
-            부동산 대출 & 정책금융 진단기
-            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">최신 규제 반영</span>
+            홈파인더 <span class="text-blue-600 text-sm font-semibold">대출계산기</span>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">스트레스 DSR 2단계</span>
           </h1>
-          <p class="text-xs text-slate-500 hidden sm:block">LTV · DSR 40% · 스트레스 DSR · 디딤돌 · 보금자리론 · 신생아특례 자격 진단</p>
+          <p class="text-xs text-slate-500 hidden sm:block">LTV · DSR 40% · 디딤돌 · 보금자리론 · 신생아특례 자격 진단</p>
         </div>
       </div>
       
       <!-- Preset Quick Actions -->
-    <div class="flex items-center gap-2">
-      <button onclick="applyPreset('firstHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
-        청년 생애최초 (5억)
-      </button>
-      <button onclick="applyPreset('newlywed')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
-        신혼부부 (8억)
-      </button>
-      <button onclick="applyPreset('gangnam')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
-        규제지역 (15억)
-      </button>
+      <div class="flex items-center gap-2">
+        <button type="button" onclick="applyPreset('firstHome')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
+          청년 생초 (5억)
+        </button>
+        <button type="button" onclick="applyPreset('newlywed')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
+          신혼부부 (8억)
+        </button>
+        <button type="button" onclick="applyPreset('gangnam')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
+          규제지역 (15억)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 상단 광고 배너 슬롯 -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+    <div class="bg-slate-100/70 border border-dashed border-slate-300 rounded-xl min-h-[90px] flex flex-col items-center justify-center text-center p-2">
+      <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider mb-1">Sponsored Advertisement</span>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2429123210227554"
+           data-ad-slot="default"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
   </div>
-</header>
 
-<!-- AdSense Top Leaderboard Banner (728x90 / Responsive) -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-  <div class="bg-slate-100/70 border border-dashed border-slate-300 rounded-xl min-h-[90px] flex flex-col items-center justify-center text-center p-2">
-    <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider mb-1">Sponsored Advertisement</span>
-    <!-- 실제 애드센스 광고 코드 삽입 영역 -->
-    <!--
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    -->
-    <p class="text-xs text-slate-500 font-medium">[구글 애드센스 상단 반응형 배너 영역 (ca-pub 및 data-ad-slot 입력)]</p>
-  </div>
-</div>
-
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
     <div class="mb-6 p-4 rounded-2xl bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
       <div class="space-y-1">
         <div class="flex items-center gap-2">
@@ -135,7 +116,7 @@
         </div>
         <p class="text-xs text-blue-200 leading-relaxed">
           강남 3구(강남·서초·송파) 및 용산구는 <span class="text-amber-300 font-semibold">투기과열지구·조정대상지역</span>으로 LTV가 최대 50%로 제한되며, 
-          생애최초 구입자는 지역 무관 <span class="text-amber-300 font-semibold">최대 80%(8억원 주택한도 시 6억 상한)</span>가 적용됩니다.
+          생애최초 구입자는 지역 무관 <span class="text-amber-300 font-semibold">최대 80%(상한 6억원)</span>가 적용됩니다.
         </p>
       </div>
       <div class="text-xs bg-white/10 backdrop-blur px-3 py-2 rounded-xl border border-white/20 whitespace-nowrap self-stretch md:self-auto text-center">
@@ -144,9 +125,8 @@
       </div>
     </div>
 
-    <!-- Main Grid: Inputs vs Calculation Results -->
+    <!-- Main Form Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
       <section class="lg:col-span-6 xl:col-span-5 space-y-6">
         
         <!-- Box 1: 대상 부동산 정보 -->
@@ -188,7 +168,6 @@
               <input type="number" id="input-house-price" value="70000" step="1000" min="1000" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2.5 px-3.5 pr-14 text-sm font-semibold focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:bg-white" oninput="onPriceChange()">
               <span class="absolute right-3.5 top-2.5 text-xs text-slate-400 font-medium">만원</span>
             </div>
-            <!-- Quick Increment Buttons -->
             <div class="flex items-center gap-1.5 mt-2 overflow-x-auto pb-1">
               <button type="button" onclick="addHousePrice(1000)" class="text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded-md font-medium">+1천만</button>
               <button type="button" onclick="addHousePrice(5000)" class="text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded-md font-medium">+5천만</button>
@@ -211,7 +190,7 @@
               </select>
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-600 mb-1.5">전용면적 (국민평형 여부)</label>
+              <label class="block text-xs font-semibold text-slate-600 mb-1.5">전용면적</label>
               <select id="select-area-size" onchange="recalculate()" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 text-xs font-medium focus:outline-hidden focus:ring-2 focus:ring-blue-500">
                 <option value="under85" selected>85㎡ 이하 (국민주택규모)</option>
                 <option value="over85">85㎡ 초과 (대형평수)</option>
@@ -220,6 +199,7 @@
           </div>
         </div>
 
+        <!-- Box 2: 자격 및 소득 -->
         <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs space-y-4">
           <div class="flex items-center justify-between pb-3 border-b border-slate-100">
             <h3 class="font-bold text-slate-800 flex items-center gap-2 text-base">
@@ -229,14 +209,13 @@
             <span class="text-xs text-slate-400">특례·정책 기준</span>
           </div>
 
-          <!-- 자격 구분 (청년/생애최초/신혼/신생아/일반) -->
           <div>
-            <label class="block text-xs font-semibold text-slate-600 mb-1.5">특별 자격 요건 (중복 혜택 우대 체크)</label>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">특별 자격 요건</label>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
               <button type="button" onclick="setSpecialType('firstHome')" id="type-firstHome" class="type-btn border-2 border-indigo-500 bg-indigo-50/60 rounded-xl p-2.5 text-left transition">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-indigo-950">생애최초</span>
-                  <span class="text-[9px] bg-indigo-200 text-indigo-800 px-1 rounded">LTV 80%</span>
+                  <span class="text-[9px] bg-indigo-200 text-indigo-800 px-1 rounded font-bold">LTV 80%</span>
                 </div>
                 <p class="text-[10px] text-slate-500 mt-1">세대원 전원 무주택</p>
               </button>
@@ -244,7 +223,7 @@
               <button type="button" onclick="setSpecialType('newlywed')" id="type-newlywed" class="type-btn border-2 border-slate-200 hover:border-indigo-300 rounded-xl p-2.5 text-left transition">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-slate-800">신혼부부</span>
-                  <span class="text-[9px] bg-pink-100 text-pink-700 px-1 rounded">우대</span>
+                  <span class="text-[9px] bg-pink-100 text-pink-700 px-1 rounded font-bold">우대</span>
                 </div>
                 <p class="text-[10px] text-slate-500 mt-1">혼인 7년 이내/예정</p>
               </button>
@@ -252,7 +231,7 @@
               <button type="button" onclick="setSpecialType('newborn')" id="type-newborn" class="type-btn border-2 border-slate-200 hover:border-indigo-300 rounded-xl p-2.5 text-left transition">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-slate-800">신생아 출산</span>
-                  <span class="text-[9px] bg-emerald-100 text-emerald-700 px-1 rounded">1%대</span>
+                  <span class="text-[9px] bg-emerald-100 text-emerald-700 px-1 rounded font-bold">1%대</span>
                 </div>
                 <p class="text-[10px] text-slate-500 mt-1">2년 내 출산/입양</p>
               </button>
@@ -260,17 +239,17 @@
               <button type="button" onclick="setSpecialType('youth')" id="type-youth" class="type-btn border-2 border-slate-200 hover:border-indigo-300 rounded-xl p-2.5 text-left transition">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-slate-800">청년</span>
-                  <span class="text-[9px] bg-blue-100 text-blue-700 px-1 rounded">만39세</span>
+                  <span class="text-[9px] bg-blue-100 text-blue-700 px-1 rounded font-bold">만39세</span>
                 </div>
                 <p class="text-[10px] text-slate-500 mt-1">만 19세~39세 이하</p>
               </button>
 
               <button type="button" onclick="setSpecialType('general')" id="type-general" class="type-btn border-2 border-slate-200 hover:border-indigo-300 rounded-xl p-2.5 text-left transition sm:col-span-2">
                 <div class="flex items-center justify-between">
-                  <span class="font-bold text-xs text-slate-800">일반 무주택 / 1주택자</span>
-                  <span class="text-[9px] bg-slate-200 text-slate-700 px-1 rounded">기본</span>
+                  <span class="font-bold text-xs text-slate-800">일반 무주택 / 1주택</span>
+                  <span class="text-[9px] bg-slate-200 text-slate-700 px-1 rounded font-bold">기본</span>
                 </div>
-                <p class="text-[10px] text-slate-500 mt-1">일반 주택구입 및 갈아타기 처분조건부</p>
+                <p class="text-[10px] text-slate-500 mt-1">일반 주택구입 및 갈아타기</p>
               </button>
             </div>
           </div>
@@ -285,16 +264,16 @@
               </label>
               <label class="flex items-center justify-center p-2 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 has-checked:border-blue-600 has-checked:bg-blue-50/50">
                 <input type="radio" name="homeCount" value="1" onchange="recalculate()" class="sr-only">
-                <span class="text-xs font-bold text-slate-700">1주택 (처분/보유)</span>
+                <span class="text-xs font-bold text-slate-700">1주택 (처분조건)</span>
               </label>
               <label class="flex items-center justify-center p-2 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 has-checked:border-blue-600 has-checked:bg-blue-50/50">
                 <input type="radio" name="homeCount" value="2" onchange="recalculate()" class="sr-only">
-                <span class="text-xs font-bold text-slate-700">다주택 (2주택 이상)</span>
+                <span class="text-xs font-bold text-slate-700">다주택 (2주택+)</span>
               </label>
             </div>
           </div>
 
-          <!-- 연소득 입력 -->
+          <!-- 연소득 -->
           <div>
             <div class="flex justify-between items-center mb-1.5">
               <label class="text-xs font-semibold text-slate-600">연간 소득 (부부합산 세전)</label>
@@ -304,15 +283,16 @@
               <input type="number" id="input-annual-income" value="6500" step="100" min="500" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2.5 px-3.5 pr-14 text-sm font-semibold focus:outline-hidden focus:ring-2 focus:ring-indigo-500 focus:bg-white" oninput="onIncomeChange()">
               <span class="absolute right-3.5 top-2.5 text-xs text-slate-400 font-medium">만원</span>
             </div>
-            <div class="flex gap-1.5 mt-2">
-              <button type="button" onclick="setIncome(3500)" class="text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded-md">3.5천만(사회초년생)</button>
+            <div class="flex flex-wrap gap-1.5 mt-2">
+              <button type="button" onclick="setIncome(3500)" class="text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded-md">3.5천만</button>
               <button type="button" onclick="setIncome(6000)" class="text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded-md">6천만</button>
-              <button type="button" onclick="setIncome(8500)" class="text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded-md">8.5천만(신혼소득상한)</button>
-              <button type="button" onclick="setIncome(13000)" class="text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded-md">1.3억(신생아특례)</button>
+              <button type="button" onclick="setIncome(8500)" class="text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded-md">8.5천만(신혼)</button>
+              <button type="button" onclick="setIncome(13000)" class="text-[11px] bg-slate-100 hover:bg-slate-200 text-slate-600 px-2 py-1 rounded-md">1.3억(신생아)</button>
             </div>
           </div>
         </div>
 
+        <!-- Box 3: 기존 부채 및 대출 조건 -->
         <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs space-y-4">
           <div class="flex items-center justify-between pb-3 border-b border-slate-100">
             <h3 class="font-bold text-slate-800 flex items-center gap-2 text-base">
@@ -322,14 +302,13 @@
             <span class="text-xs text-slate-400">DSR 계산 요소</span>
           </div>
 
-          <!-- 기존 대출 원리금 상환액 -->
           <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-3">
             <div class="flex justify-between items-center">
               <label class="text-xs font-semibold text-slate-700">기존 대출 연간 원리금 상환액</label>
               <span id="label-existing-debt" class="text-xs font-bold text-slate-900">연 0만원</span>
             </div>
             <p class="text-[11px] text-slate-500 leading-tight">
-              신용대출, 마이너스통장(이자+원금환산), 자동차할부, 타 주담대 등 매년 갚아야 할 원금+이자 총액
+              신용대출, 마이너스통장(이자+원금분할환산), 타 담보대출 등 연간 갚아야 할 원리금 총액
             </p>
             <div class="relative">
               <input type="number" id="input-existing-annual-repay" value="0" step="50" min="0" class="w-full bg-white border border-slate-300 rounded-lg py-2 px-3 pr-14 text-xs font-semibold focus:ring-2 focus:ring-emerald-500" oninput="onExistingDebtChange()">
@@ -337,25 +316,24 @@
             </div>
             <div class="flex gap-1.5">
               <button type="button" onclick="setExistingDebt(0)" class="text-[11px] bg-white border border-slate-200 hover:bg-slate-100 px-2 py-0.5 rounded text-slate-600">부채 없음</button>
-              <button type="button" onclick="setExistingDebt(300)" class="text-[11px] bg-white border border-slate-200 hover:bg-slate-100 px-2 py-0.5 rounded text-slate-600">신용 3천만 (연 약 300만)</button>
+              <button type="button" onclick="setExistingDebt(300)" class="text-[11px] bg-white border border-slate-200 hover:bg-slate-100 px-2 py-0.5 rounded text-slate-600">신용 3천만 (연 300만)</button>
               <button type="button" onclick="setExistingDebt(800)" class="text-[11px] bg-white border border-slate-200 hover:bg-slate-100 px-2 py-0.5 rounded text-slate-600">연 800만원</button>
             </div>
           </div>
 
-          <!-- 신규 대출 세부 조건 (만기, 예상금리, 상환방식) -->
           <div class="grid grid-cols-2 gap-3">
             <div>
-              <label class="block text-xs font-semibold text-slate-600 mb-1">대출 만기 (기간)</label>
+              <label class="block text-xs font-semibold text-slate-600 mb-1">대출 만기</label>
               <select id="select-loan-term" onchange="recalculate()" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 text-xs font-semibold focus:ring-2 focus:ring-blue-500">
                 <option value="10">10년 (120개월)</option>
                 <option value="20">20년 (240개월)</option>
                 <option value="30" selected>30년 (360개월)</option>
-                <option value="40">40년 (만 39세 / 신혼 / 생초)</option>
-                <option value="50">50년 (만 34세 이하 / 특례한정)</option>
+                <option value="40">40년 (청년/생초)</option>
+                <option value="50">50년 (특례한정)</option>
               </select>
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-600 mb-1">예상 주담대 기본금리</label>
+              <label class="block text-xs font-semibold text-slate-600 mb-1">예상 기본금리</label>
               <div class="relative">
                 <input type="number" id="input-interest-rate" value="3.90" step="0.05" min="1.0" max="15.0" class="w-full bg-slate-50 border border-slate-300 rounded-xl py-2 px-3 pr-8 text-xs font-semibold focus:ring-2 focus:ring-blue-500" oninput="recalculate()">
                 <span class="absolute right-2.5 top-2 text-xs text-slate-400 font-bold">%</span>
@@ -368,8 +346,8 @@
             <div class="flex items-center gap-2">
               <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600 shrink-0"></i>
               <div>
-                <span class="text-xs font-bold text-amber-950">스트레스 DSR 2단계 가산금리 적용</span>
-                <p class="text-[10px] text-amber-700">수도권 1.20%p / 비수도권 0.75%p 추가 가산하여 한도 산출</p>
+                <span class="text-xs font-bold text-amber-950">스트레스 DSR 2단계 가산금리 반영</span>
+                <p class="text-[10px] text-amber-700">수도권 1.20%p / 지방 0.75%p 가산 한도 산정</p>
               </div>
             </div>
             <input type="checkbox" id="check-stress-dsr" checked onchange="recalculate()" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
@@ -377,7 +355,7 @@
 
           <!-- 상환 방식 -->
           <div>
-            <label class="block text-xs font-semibold text-slate-600 mb-1.5">상환 방식 선택</label>
+            <label class="block text-xs font-semibold text-slate-600 mb-1.5">상환 방식</label>
             <div class="grid grid-cols-3 gap-2">
               <label class="flex items-center justify-center p-2 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 has-checked:border-emerald-600 has-checked:bg-emerald-50/40 text-center">
                 <input type="radio" name="repayMethod" value="equalPI" checked onchange="recalculate()" class="sr-only">
@@ -405,9 +383,10 @@
         </div>
       </section>
 
+      <!-- Section: Results -->
       <section class="lg:col-span-6 xl:col-span-7 space-y-6">
 
-        <!-- Result Card 1: 최대 대출 한도 요약 -->
+        <!-- Result Card 1: 최대 대출 한도 -->
         <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-md relative overflow-hidden">
           <div class="absolute top-0 right-0 transform translate-x-4 -translate-y-4 w-32 h-32 bg-blue-100/50 rounded-full blur-2xl pointer-events-none"></div>
 
@@ -422,10 +401,9 @@
             </div>
           </div>
 
-          <!-- Large Amount Display -->
           <div class="py-6 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
-              <span class="text-xs font-medium text-slate-500 block mb-1">1금융권 일반 주담대 최대 한도</span>
+              <span class="text-xs font-medium text-slate-500 block mb-1">1금융권 일반 주담대 최대 가능액</span>
               <div class="flex items-baseline gap-1.5">
                 <span id="final-max-loan" class="text-4xl sm:text-5xl font-extrabold text-blue-600 tracking-tight">4억 2,000</span>
                 <span class="text-lg font-bold text-slate-700">만원</span>
@@ -452,23 +430,23 @@
 
             <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
               <div class="flex justify-between items-center text-xs mb-1">
-                <span class="font-semibold text-slate-600">DSR 40% 한도 (가용액)</span>
+                <span class="font-semibold text-slate-600">DSR 40% 가용 한도</span>
                 <span id="stat-dsr-amount" class="font-bold text-indigo-700">4억 2,000만원</span>
               </div>
               <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
                 <div id="bar-dsr" class="bg-indigo-600 h-full rounded-full transition-all duration-500" style="width: 60%"></div>
               </div>
-              <p id="stat-dsr-note" class="text-[10px] text-indigo-600 font-medium mt-1">스트레스 DSR 5.10% 적용 기준</p>
+              <p id="stat-dsr-note" class="text-[10px] text-indigo-600 font-medium mt-1">스트레스 금리 적용 기준</p>
             </div>
           </div>
 
-          <!-- Regulatory Warning if Applicable -->
           <div id="regulatory-alert-box" class="mt-4 p-3 rounded-xl text-xs flex items-start gap-2 bg-slate-100 text-slate-700">
             <i data-lucide="info" class="w-4 h-4 text-blue-500 mt-0.5 shrink-0"></i>
             <span id="regulatory-alert-text">정상적으로 산출되었습니다.</span>
           </div>
         </div>
 
+        <!-- Result Card 2: 매달 상환 금액 -->
         <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-xs space-y-4">
           <div class="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
@@ -479,27 +457,24 @@
               <p class="text-xs text-slate-400">선택한 상환방식 기준 월 납부액</p>
             </div>
             <div class="text-right">
-              <span class="text-[11px] text-slate-500">대출 적용 금리</span>
+              <span class="text-[11px] text-slate-500">실제 적용 금리</span>
               <p id="stat-active-rate" class="text-sm font-extrabold text-slate-800">연 3.90%</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-2">
-            <!-- 1회차 상환액 -->
             <div class="bg-emerald-50/60 p-4 rounded-xl border border-emerald-100">
-              <span class="text-xs text-emerald-800 font-medium">첫 달 상환액 (1회차)</span>
+              <span class="text-xs text-emerald-800 font-medium">첫 달 납입액 (1회차)</span>
               <p id="val-first-month-repay" class="text-2xl font-black text-emerald-700 mt-1">198만원</p>
-              <p id="val-first-month-detail" class="text-[10px] text-emerald-600 mt-1">원금 62만 + 이자 136만</p>
+              <p id="val-first-month-detail" class="text-[10px] text-emerald-600 mt-1">원금 + 이자 상세</p>
             </div>
 
-            <!-- 대출 전기간 총 이자 -->
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
               <span class="text-xs text-slate-600 font-medium">총 납부 이자 (전체 만기)</span>
               <p id="val-total-interest" class="text-2xl font-black text-slate-800 mt-1">2억 9,340만</p>
               <p class="text-[10px] text-slate-500 mt-1">원금 외 순수 금융비용</p>
             </div>
 
-            <!-- 총 원리금 상환액 -->
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
               <span class="text-xs text-slate-600 font-medium">총 원리금 합계</span>
               <p id="val-total-repay" class="text-2xl font-black text-slate-800 mt-1">7억 1,340만</p>
@@ -507,68 +482,54 @@
             </div>
           </div>
 
-          <!-- Chart & Repayment Visual -->
-        <div class="pt-3 border-t border-slate-100 flex flex-col md:flex-row items-center gap-6">
-          <div class="w-36 h-36 relative shrink-0">
-            <canvas id="repayDonutChart"></canvas>
-          </div>
-          <div class="flex-1 w-full space-y-2 text-xs">
-            <div class="flex justify-between items-center p-2 rounded-lg bg-slate-50">
-              <span class="flex items-center gap-2 text-slate-600">
-                <span class="w-3 h-3 rounded-full bg-blue-600 inline-block"></span>
-                대출 원금 (차입액)
-              </span>
-              <span id="chart-legend-principal" class="font-bold text-slate-800">4억 2,000만원 (58.9%)</span>
+          <div class="pt-3 border-t border-slate-100 flex flex-col md:flex-row items-center gap-6">
+            <div class="w-36 h-36 relative shrink-0">
+              <canvas id="repayDonutChart"></canvas>
             </div>
-            <div class="flex justify-between items-center p-2 rounded-lg bg-slate-50">
-              <span class="flex items-center gap-2 text-slate-600">
-                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
-                총 납부 이자
-              </span>
-              <span id="chart-legend-interest" class="font-bold text-slate-800">2억 9,340만원 (41.1%)</span>
+            <div class="flex-1 w-full space-y-2 text-xs">
+              <div class="flex justify-between items-center p-2 rounded-lg bg-slate-50">
+                <span class="flex items-center gap-2 text-slate-600">
+                  <span class="w-3 h-3 rounded-full bg-blue-600 inline-block"></span>
+                  대출 원금 (차입액)
+                </span>
+                <span id="chart-legend-principal" class="font-bold text-slate-800">0만원</span>
+              </div>
+              <div class="flex justify-between items-center p-2 rounded-lg bg-slate-50">
+                <span class="flex items-center gap-2 text-slate-600">
+                  <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                  총 납부 이자
+                </span>
+                <span id="chart-legend-interest" class="font-bold text-slate-800">0만원</span>
+              </div>
+              <p class="text-[11px] text-slate-400">※ 통상 은행 대출은 실행 후 3년 경과 시 중도상환수수료가 면제됩니다.</p>
             </div>
-            <p class="text-[11px] text-slate-400">※ 조기상환 수수료는 대출 실행 후 3년 경과 시 0%로 면제됩니다.</p>
           </div>
         </div>
-      </div>
 
-      <!-- Mid-Content Native / In-Article Ad Unit -->
-      <div class="bg-slate-100/70 border border-dashed border-slate-300 rounded-2xl min-h-[110px] flex flex-col items-center justify-center text-center p-3">
-        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider mb-1">Advertisement</span>
-        <!--
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-format="fluid"
-             data-ad-layout-key="-fb+5w+4e-db+86"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXXX"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        -->
-        <p class="text-xs text-slate-500 font-medium">대출 비교 및 금리 인하 특판 배너 (In-Feed / In-Article 광고)</p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-xs space-y-4">
+        <!-- Result Card 3: 정부 정책 대출 적격 판정 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-xs space-y-4">
           <div class="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h4 class="font-bold text-slate-900 text-base flex items-center gap-2">
                 <i data-lucide="shield-check" class="w-5 h-5 text-indigo-600"></i>
                 HUG & 주택금융공사 정부 정책금융 적격 여부
               </h4>
-              <p class="text-xs text-slate-400">시중은행 대비 최대 2~3%p 저렴한 국가 지원 기금 상품 진단</p>
+              <p class="text-xs text-slate-400">시중은행 대비 금리가 저렴한 국가 정책 기금 상품 진단</p>
             </div>
             <span class="text-xs bg-indigo-50 text-indigo-700 font-bold px-2 py-1 rounded-lg">서민·청년 혜택</span>
           </div>
 
           <div id="policy-products-list" class="space-y-3">
-            <!-- Dynamic Injection of Policy Programs (Didimdol, Newborn, Bogeumjari, etc.) -->
+            <!-- Dynamic Injection -->
           </div>
         </div>
 
+        <!-- Result Card 4: 상환 테이블 -->
         <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs">
           <div class="flex items-center justify-between mb-3">
             <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
               <i data-lucide="table" class="w-4 h-4 text-slate-500"></i>
-              연도별 상환 흐름 미리보기 (1년~5년 및 완납 시점)
+              연도별 상환 흐름 미리보기 (1년~5년 및 만기)
             </h4>
             <span class="text-[11px] text-slate-400">단위: 만원</span>
           </div>
@@ -584,284 +545,775 @@
                 </tr>
               </thead>
               <tbody id="schedule-table-body" class="divide-y divide-slate-100 font-medium text-slate-700">
-              <!-- Dynamically filled -->
+                <!-- Dynamic Schedule Rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Educational Content Section (SEO & 애드센스 심사용) -->
+    <section class="mt-12 space-y-8">
+      <div class="border-b border-slate-200 pb-4">
+        <div class="flex items-center gap-2">
+          <span class="bg-blue-600 text-white font-bold text-xs px-2.5 py-1 rounded-md">가이드북</span>
+          <h3 class="text-xl font-bold text-slate-900 tracking-tight">부동산 대출 규제 공식 해설 & 실전 가이드</h3>
+        </div>
+        <p class="text-xs text-slate-500 mt-1">DSR, 스트레스 금리 산정 원리, 지역별 LTV 및 정책 모기지 공식을 완벽 정리해 드립니다.</p>
+      </div>
+
+      <!-- 카드 1: DSR 공식 및 스트레스 DSR 심층 해설 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-black text-sm">1</div>
+          <h4 class="text-base font-bold text-slate-900">DSR (총부채원리금상환비율) 산출 공식과 스트레스 금리 원리</h4>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-600 leading-relaxed">
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 space-y-2">
+            <p class="font-bold text-slate-800 text-sm">DSR 기본 계산 공식</p>
+            <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-[11px] text-blue-900">
+              DSR(%) = (신규 주담대 연간 원리금 + 기존 부채 연간 원리금) ÷ 연간 세전 소득 × 100
+            </div>
+            <p>
+              현재 1금융권(시중은행)은 <strong>DSR 40%</strong>를 일괄 적용받으며, 2금융권(보험사·상호금융)은 <strong>50%</strong>까지 인정됩니다. 연봉 5,000만원인 차주는 1년에 갚아야 할 원금과 이자의 총합이 <strong>2,000만원(40%)</strong>을 넘을 수 없습니다.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 space-y-2">
+            <p class="font-bold text-slate-800 text-sm">스트레스 DSR 2단계 핵심</p>
+            <p>
+              향후 금리 변동 위험을 사전에 차단하기 위해 대출 한도를 산정할 때 실제 대출 금리보다 높은 <strong>'가산 스트레스 금리'</strong>를 적용하는 제도입니다.
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-slate-700">
+              <li><strong>수도권(서울·경기·인천):</strong> 스트레스 금리 <strong>+1.20%p</strong> 가산</li>
+              <li><strong>비수도권(지방 광역시·도):</strong> 스트레스 금리 <strong>+0.75%p</strong> 가산</li>
+              <li>실제 내는 이자는 기본금리로 납부하지만, <strong>대출 한도(원금)는 가산금리가 반영되어 대폭 축소</strong>됩니다.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 카드 2: LTV 한도표 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-black text-sm">2</div>
+          <h4 class="text-base font-bold text-slate-900">지역 및 대상별 LTV(주택담보대출비율) 한도 요약</h4>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left border-collapse border border-slate-200">
+            <thead class="bg-slate-100 text-slate-700 font-semibold">
+              <tr>
+                <th class="border border-slate-200 p-2.5">구분</th>
+                <th class="border border-slate-200 p-2.5">규제지역 (강남·서초·송파·용산)</th>
+                <th class="border border-slate-200 p-2.5">비규제 수도권 및 지방</th>
+                <th class="border border-slate-200 p-2.5">비고 및 유의점</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-600">
+              <tr>
+                <td class="border border-slate-200 p-2.5 font-bold text-slate-800">생애최초 주택구입</td>
+                <td class="border border-slate-200 p-2.5 text-blue-600 font-bold">LTV 80% (상한 6억원)</td>
+                <td class="border border-slate-200 p-2.5 text-blue-600 font-bold">LTV 80% (상한 6억원)</td>
+                <td class="border border-slate-200 p-2.5">지역 무관 동일 혜택 (단, DSR 40% 충족 필요)</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-200 p-2.5 font-bold text-slate-800">무주택 일반 세대</td>
+                <td class="border border-slate-200 p-2.5 font-semibold text-slate-900">LTV 50%</td>
+                <td class="border border-slate-200 p-2.5 font-semibold text-slate-900">LTV 70%</td>
+                <td class="border border-slate-200 p-2.5">KB시세 또는 감정평가액 기준</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-200 p-2.5 font-bold text-slate-800">1주택 보유 세대 (갈아타기)</td>
+                <td class="border border-slate-200 p-2.5">LTV 30% (처분조건부 등)</td>
+                <td class="border border-slate-200 p-2.5">LTV 60%</td>
+                <td class="border border-slate-200 p-2.5">기존 주택 일정 기간 내 처분 서약 필수</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-200 p-2.5 font-bold text-slate-800">다주택자 (2주택 이상)</td>
+                <td class="border border-slate-200 p-2.5 text-rose-600 font-bold">대출 전면 금지 (LTV 0%)</td>
+                <td class="border border-slate-200 p-2.5">LTV 60%</td>
+                <td class="border border-slate-200 p-2.5">규제지역 내 주택 취득 목적 대출 불가</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
 
+      <!-- 카드 3: 정책 모기지 안내 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-black text-sm">3</div>
+          <h4 class="text-base font-bold text-slate-900">정부 정책 모기지(신생아특례 / 디딤돌 / 보금자리론) 가이드</h4>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-emerald-50/50 border border-emerald-200 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">최우선 추천</span>
+              <h5 class="font-bold text-sm text-slate-900 mt-1">신생아 특례 디딤돌 대출</h5>
+              <p class="text-slate-600 mt-2 leading-relaxed">
+                2년 내 자녀 출산/입양 가구 대상. 시중 최저 수준인 <strong>연 1%대 초저금리</strong>이며, <strong>DSR 40% 규제가 면제</strong>되어 한도 확보에 가장 유리합니다.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-emerald-200 text-slate-700">
+              <span class="font-semibold">대상 주택:</span> 9억원 이하 (전용 85㎡ 이하)<br>
+              <span class="font-semibold">대출 한도:</span> 최대 5억원
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-blue-50/50 border border-blue-200 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-blue-800 bg-blue-100 px-2 py-0.5 rounded">서민·생애최초</span>
+              <h5 class="font-bold text-sm text-slate-900 mt-1">내집마련 디딤돌 대출</h5>
+              <p class="text-slate-600 mt-2 leading-relaxed">
+                부부합산 소득 요건(신혼 8,500만원, 일반 6,000만원) 충족 무주택자용 대표 상품. 마찬가지로 <strong>DSR 미적용(DTI 60% 적용)</strong>입니다.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-blue-200 text-slate-700">
+              <span class="font-semibold">대상 주택:</span> 5억원 이하 (신혼 6억원 이하)<br>
+              <span class="font-semibold">대출 한도:</span> 2.5억 ~ 최대 4억원
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-indigo-50/50 border border-indigo-200 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-indigo-800 bg-indigo-100 px-2 py-0.5 rounded">중산층 고정금리</span>
+              <h5 class="font-bold text-sm text-slate-900 mt-1">HF 보금자리론</h5>
+              <p class="text-slate-600 mt-2 leading-relaxed">
+                디딤돌 소득 기준을 초과하거나 6억원 이하 주택을 구입할 때 적합합니다. 최장 50년까지 전 기간 순수 고정금리가 적용됩니다.
+              </p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-indigo-200 text-slate-700">
+              <span class="font-semibold">대상 주택:</span> 6억원 이하<br>
+              <span class="font-semibold">대출 한도:</span> 최대 3.6억 ~ 4.2억원
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 카드 4: FAQ 아코디언 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-black text-sm">?</div>
+          <h4 class="text-base font-bold text-slate-900">자주 묻는 질문 (FAQ)</h4>
+        </div>
+        <div class="space-y-3 text-xs">
+          <details class="group bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
+            <summary class="font-bold text-slate-800 flex justify-between items-center">
+              <span>Q. 마이너스 통장이나 신용대출이 있으면 주택담보대출 한도가 줄어드나요?</span>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-2 text-slate-600 leading-relaxed pt-2 border-t border-slate-200/80">
+              네, 크게 줄어듭니다. 마이너스 통장은 개설된 한도 전액을 기준으로 연간 원리금 분할상환액이 계산되어 DSR에 반영됩니다. 주담대 신청 직전 쓰지 않는 마이너스 통장을 해지하거나 소액 신용대출을 상환하면 주담대 한도가 수천만 원에서 수억 원까지 늘어날 수 있습니다.
+            </p>
+          </details>
+
+          <details class="group bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
+            <summary class="font-bold text-slate-800 flex justify-between items-center">
+              <span>Q. 방공제(소액임차보증금 최우선변제액)는 무엇이며 어떻게 계산되나요?</span>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-2 text-slate-600 leading-relaxed pt-2 border-t border-slate-200/80">
+              주택임대차보호법상 소액임차인을 보호하기 위해 금융기관이 대출 한도에서 차감하는 금액입니다. 서울 기준 약 5,500만원이 차감될 수 있으나, 주택금융공사(HF)의 모기지신용보증(MCG) 또는 서울보증보험(SGI)의 모기지신용보험(MCI)에 가입하면 방공제 차감 없이 최대 LTV 한도까지 모두 대출받을 수 있습니다.
+            </p>
+          </details>
+
+          <details class="group bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
+            <summary class="font-bold text-slate-800 flex justify-between items-center">
+              <span>Q. 대출 만기를 30년에서 40년으로 늘리면 어떤 장단점이 있나요?</span>
+              <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-2 text-slate-600 leading-relaxed pt-2 border-t border-slate-200/80">
+              만기가 길어질수록 1년에 갚아야 하는 원금 액수가 분산되어 DSR 비율이 낮아지고, 그 결과 <strong>최대 대출 한도가 증가</strong>합니다. 다만 매월 이자를 내는 기간이 길어지므로 전 기간 누적 총 이자액은 늘어나게 됩니다. 한도를 최대로 당겨 집을 매수한 뒤 3년 후 중도상환수수료가 없어질 때 원금을 조기 상환하는 전략이 유리합니다.
+            </p>
+          </details>
+        </div>
+      </div>
     </section>
-  </div>
 
-  <!-- Educational Content Section (애드센스 '가치 있는 콘텐츠' 심사 통과 및 검색 유입용) -->
-  <section class="mt-12 space-y-8">
-    
-    <!-- 섹션 헤더 -->
-    <div class="border-b border-slate-200 pb-4">
-      <div class="flex items-center gap-2">
-        <span class="bg-blue-600 text-white font-bold text-xs px-2.5 py-1 rounded-md">가이드북</span>
-        <h3 class="text-xl font-bold text-slate-900 tracking-tight">부동산 대출 규제 공식 해설 & 실전 가이드</h3>
+    <!-- 하단 AdSense 배너 슬롯 -->
+    <div class="mt-8">
+      <div class="bg-slate-100/70 border border-dashed border-slate-300 rounded-xl min-h-[90px] flex flex-col items-center justify-center text-center p-2">
+        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider mb-1">Sponsored Advertisement</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2429123210227554"
+             data-ad-slot="default"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
-      <p class="text-xs text-slate-500 mt-1">DSR, 스트레스 금리 산정 원리, 지역별 LTV 및 정책 모기지 공식을 완벽 정리해 드립니다.</p>
     </div>
+  </main>
 
-    <!-- 카드 1: DSR 공식 및 스트레스 DSR 심층 해설 -->
-    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-black text-sm">1</div>
-        <h4 class="text-base font-bold text-slate-900">DSR (총부채원리금상환비율) 산출 공식과 스트레스 금리 원리</h4>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-600 leading-relaxed">
-        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 space-y-2">
-          <p class="font-bold text-slate-800 text-sm">DSR 기본 계산 공식</p>
-          <div class="bg-white p-3 rounded-lg border border-slate-200 font-mono text-[11px] text-blue-900">
-            DSR(%) = (신규 주담대 연간 원리금 + 모든 기존 부채 연간 원리금) ÷ 연간 세전 소득 × 100
-          </div>
-          <p>
-            현재 1금융권(시중은행)은 <strong>DSR 40%</strong>를 일괄 적용받으며, 2금융권(보험사·저축은행·상호금융)은 <strong>50%</strong>까지 인정됩니다. 즉, 연봉 5,000만원인 차주는 1년에 갚아야 할 원금과 이자의 총합이 <strong>2,000만원(40%)</strong>을 넘지 못합니다.
-          </p>
+  <footer class="mt-12 bg-white border-t border-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-500 space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-100">
+        <div class="flex items-center space-x-4">
+          <button type="button" onclick="openModal('privacyModal')" class="hover:text-blue-600 font-semibold underline cursor-pointer">개인정보처리방침</button>
+          <button type="button" onclick="openModal('termsModal')" class="hover:text-blue-600 font-semibold underline cursor-pointer">이용약관 및 면책조항</button>
         </div>
-
-        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80 space-y-2">
-          <p class="font-bold text-slate-800 text-sm">스트레스 DSR 2단계 핵심</p>
-          <p>
-            향후 금리 변동 위험을 사전에 차단하기 위해 대출 한도를 산정할 때 실제 대출 금리보다 높은 <strong>'가산 스트레스 금리'</strong>를 적용하는 제도입니다.
-          </p>
-          <ul class="list-disc list-inside space-y-1 text-slate-700">
-            <li><strong>수도권(서울·경기·인천):</strong> 스트레스 금리 <strong>+1.20%p</strong> 가산</li>
-            <li><strong>비수도권(지방 광역시·도):</strong> 스트레스 금리 <strong>+0.75%p</strong> 가산</li>
-            <li>실제 내는 이자는 기본금리로 납부하지만, <strong>대출 한도(원금)는 가산금리가 반영되어 대폭 줄어듭니다.</strong></li>
-          </ul>
-        </div>
+        <p class="text-slate-400">Google AdSense 규정 준수 및 SSL 보안 환경 지원</p>
       </div>
-    </div>
 
-    <!-- 카드 2: LTV 지역별·대상별 한도 비교 요약표 -->
-    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-black text-sm">2</div>
-        <h4 class="text-base font-bold text-slate-900">지역 및 대상별 LTV(주택담보대출비율) 한도 요약</h4>
+      <div class="space-y-1 leading-relaxed">
+        <p class="font-semibold text-slate-700">법적 고지 및 책임 제한 안내</p>
+        <p>1. 본 계산기는 금융위원회, 국토교통부, HUG(주택도시보증공사), HF(한국주택금융공사)의 현행 공개 규정(차주단위 DSR 40%, 스트레스 DSR 2단계 가산금리)을 반영한 모의 연산 시스템입니다.</p>
+        <p>2. 실제 대출 실행 시 적용되는 금리 및 한도는 차주의 신용점수, 담보물 시세 평가액 및 취급 기관 내부 기준에 따라 달라질 수 있으므로 금융기관 방문 상담을 반드시 진행하시기 바랍니다.</p>
       </div>
-      <div class="overflow-x-auto">
-        <table class="w-full text-xs text-left border-collapse border border-slate-200">
-          <thead class="bg-slate-100 text-slate-700 font-semibold">
-            <tr>
-              <th class="border border-slate-200 p-2.5">구분</th>
-              <th class="border border-slate-200 p-2.5">규제지역 (강남·서초·송파·용산)</th>
-              <th class="border border-slate-200 p-2.5">비규제 수도권 및 지방</th>
-              <th class="border border-slate-200 p-2.5">비고 및 유의점</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-200 text-slate-600">
-            <tr>
-              <td class="border border-slate-200 p-2.5 font-bold text-slate-800">생애최초 주택구입</td>
-              <td class="border border-slate-200 p-2.5 text-blue-600 font-bold">LTV 80% (상한 6억원)</td>
-              <td class="border border-slate-200 p-2.5 text-blue-600 font-bold">LTV 80% (상한 6억원)</td>
-              <td class="border border-slate-200 p-2.5">지역 무관 동일 혜택 (단, DSR 40% 충족 필요)</td>
-            </tr>
-            <tr>
-              <td class="border border-slate-200 p-2.5 font-bold text-slate-800">무주택 일반 세대</td>
-              <td class="border border-slate-200 p-2.5 font-semibold text-slate-900">LTV 50%</td>
-              <td class="border border-slate-200 p-2.5 font-semibold text-slate-900">LTV 70%</td>
-              <td class="border border-slate-200 p-2.5">KB시세 또는 감정평가액 기준</td>
-            </tr>
-            <tr>
-              <td class="border border-slate-200 p-2.5 font-bold text-slate-800">1주택 보유 세대 (갈아타기)</td>
-              <td class="border border-slate-200 p-2.5">LTV 30% (처분조건부 등)</td>
-              <td class="border border-slate-200 p-2.5">LTV 60%</td>
-              <td class="border border-slate-200 p-2.5">기존 주택 일정 기간 내 처분 서약 필수</td>
-            </tr>
-            <tr>
-              <td class="border border-slate-200 p-2.5 font-bold text-slate-800">다주택자 (2주택 이상)</td>
-              <td class="border border-slate-200 p-2.5 text-rose-600 font-bold">대출 전면 금지 (LTV 0%)</td>
-              <td class="border border-slate-200 p-2.5">LTV 60%</td>
-              <td class="border border-slate-200 p-2.5">규제지역 내 신규 주택 취득 목적 담보대출 제한</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
 
-    <!-- 카드 3: 정부 정책 모기지 3대장 비교 -->
-    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-black text-sm">3</div>
-        <h4 class="text-base font-bold text-slate-900">정부 정책 모기지(신생아특례 / 디딤돌 / 보금자리론) 선택 가이드</h4>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-        <div class="p-4 rounded-xl bg-emerald-50/50 border border-emerald-200 flex flex-col justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">최우선 추천</span>
-            <h5 class="font-bold text-sm text-slate-900 mt-1">신생아 특례 디딤돌 대출</h5>
-            <p class="text-slate-600 mt-2 leading-relaxed">
-              2년 내 자녀를 출산 또는 입양한 무주택 가구 대상. 시중 최저 수준인 <strong>연 1.6%~3.3%</strong> 금리를 제공하며, <strong>DSR 40% 규제가 면제</strong>되어 한도 확보에 가장 유리합니다.
-            </p>
-          </div>
-          <div class="mt-3 pt-3 border-t border-emerald-200 text-slate-700">
-            <span class="font-semibold">대상 주택:</span> 9억원 이하 (전용 85㎡ 이하)<br>
-            <span class="font-semibold">대출 한도:</span> 최대 5억원
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-blue-50/50 border border-blue-200 flex flex-col justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-blue-800 bg-blue-100 px-2 py-0.5 rounded">서민·생애최초</span>
-            <h5 class="font-bold text-sm text-slate-900 mt-1">내집마련 디딤돌 대출</h5>
-            <p class="text-slate-600 mt-2 leading-relaxed">
-              부부합산 소득 요건(신혼 8,500만원, 일반 6,000만원)을 충족하는 무주택자용 대표 상품. 마찬가지로 <strong>DSR 미적용(DTI 60% 적용)</strong>으로 은행권보다 한도가 넉넉합니다.
-            </p>
-          </div>
-          <div class="mt-3 pt-3 border-t border-blue-200 text-slate-700">
-            <span class="font-semibold">대상 주택:</span> 5억원 이하 (신혼 6억원 이하)<br>
-            <span class="font-semibold">대출 한도:</span> 2.5억 ~ 최대 4억원
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-indigo-50/50 border border-indigo-200 flex flex-col justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-indigo-800 bg-indigo-100 px-2 py-0.5 rounded">중산층 고정금리</span>
-            <h5 class="font-bold text-sm text-slate-900 mt-1">HF 보금자리론</h5>
-            <p class="text-slate-600 mt-2 leading-relaxed">
-              디딤돌대출 소득 기준을 초과하거나 6억원 이하 주택을 구입할 때 적합합니다. 최장 50년까지 전 기간 순수 고정금리가 적용되어 금리 인상기에 매우 안정적입니다.
-            </p>
-          </div>
-          <div class="mt-3 pt-3 border-t border-indigo-200 text-slate-700">
-            <span class="font-semibold">대상 주택:</span> 6억원 이하<br>
-            <span class="font-semibold">대출 한도:</span> 최대 3.6억 ~ 4.2억원
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 카드 4: 자주 묻는 질문 (FAQ 아코디언) -->
-    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-black text-sm">?</div>
-        <h4 class="text-base font-bold text-slate-900">자주 묻는 질문 (FAQ)</h4>
-      </div>
-      <div class="space-y-3 text-xs">
-        <details class="group bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
-          <summary class="font-bold text-slate-800 flex justify-between items-center">
-            <span>Q. 마이너스 통장이나 신용대출이 있으면 주택담보대출 한도가 줄어드나요?</span>
-            <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
-          </summary>
-          <p class="mt-2 text-slate-600 leading-relaxed pt-2 border-t border-slate-200/80">
-            네, 크게 줄어듭니다. 마이너스 통장은 개설된 한도 전액을 기준으로 연간 원리금 분할상환액이 계산되어 DSR에 반영됩니다. 주담대 신청 직전 쓰지 않는 마이너스 통장을 해지하거나 소액 신용대출을 상환하면 주담대 한도가 수천만 원에서 수억 원까지 늘어날 수 있습니다.
-          </p>
-        </details>
-
-        <details class="group bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
-          <summary class="font-bold text-slate-800 flex justify-between items-center">
-            <span>Q. 방공제(소액임차보증금 최우선변제액)는 무엇이며 어떻게 계산되나요?</span>
-            <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
-          </summary>
-          <p class="mt-2 text-slate-600 leading-relaxed pt-2 border-t border-slate-200/80">
-            주택임대차보호법상 소액임차인을 보호하기 위해 금융기관이 대출 한도에서 차감하는 금액입니다. 서울 기준 약 5,500만원이 차감될 수 있으나, 주택금융공사(HF)의 모기지신용보증(MCG) 또는 서울보증보험(SGI)의 모기지신용보험(MCI)에 가입하면 방공제 차감 없이 최대 LTV 한도까지 모두 대출받을 수 있습니다.
-          </p>
-        </details>
-
-        <details class="group bg-slate-50 p-3.5 rounded-xl border border-slate-200 cursor-pointer">
-          <summary class="font-bold text-slate-800 flex justify-between items-center">
-            <span>Q. 대출 만기를 30년에서 40년으로 늘리면 어떤 장단점이 있나요?</span>
-            <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
-          </summary>
-          <p class="mt-2 text-slate-600 leading-relaxed pt-2 border-t border-slate-200/80">
-            만기가 길어질수록 1년에 갚아야 하는 원금 액수가 분산되어 DSR 비율이 낮아지고, 그 결과 <strong>최대 대출 한도가 증가</strong>합니다. 다만 매월 이자를 내는 기간이 길어지므로 전 기간 누적 총 이자액은 늘어나게 됩니다. 한도를 최대로 당겨 집을 매수한 뒤 3년 후 중도상환수수료가 없어질 때 원금을 조기 상환하는 전략이 유리합니다.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 하단 AdSense 배너 슬롯 -->
-  <div class="mt-8">
-    <div class="bg-slate-100/70 border border-dashed border-slate-300 rounded-xl min-h-[90px] flex flex-col items-center justify-center text-center p-2">
-      <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider mb-1">Sponsored Advertisement</span>
-      <!--
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      -->
-      <p class="text-xs text-slate-500 font-medium">[구글 애드센스 하단 자동/반응형 배너 영역]</p>
-    </div>
-  </div>
-</main>
-
-<footer class="mt-12 bg-white border-t border-slate-200 py-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-500 space-y-4">
-    <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-100">
-      <div class="flex items-center space-x-4">
-        <button onclick="openModal('privacyModal')" class="hover:text-blue-600 font-semibold underline">개인정보처리방침</button>
-        <button onclick="openModal('termsModal')" class="hover:text-blue-600 font-semibold underline">이용약관 및 면책조항</button>
-        <a href="mailto:support@example.com" class="hover:text-blue-600">문의하기</a>
-      </div>
-      <p class="text-slate-400">Google AdSense 규정 준수 및 SSL 보안 환경 지원</p>
-    </div>
-
-    <div class="space-y-1 leading-relaxed">
-      <p class="font-semibold text-slate-700">법적 고지 및 책임 제한 안내</p>
-      <p>
-        1. 본 계산기는 금융위원회, 국토교통부, HUG(주택도시보증공사), HF(한국주택금융공사)의 공개 규정(차주단위 DSR 40%, 스트레스 DSR 2단계 가산금리)을 반영한 모의 연산 시스템입니다.
-      </p>
-      <p>
-        2. 은행 창구의 실제 승인 대출 한도는 차주의 신용점수(NICE/KCB), 기금 소진 여부, 감정평가액(KB시세 하위평균가 적용 여부), 은행별 내부 한도 기준에 따라 오차가 발생할 수 있으므로 최종 대출 실행 전 반드시 해당 금융기관 방문 상담을 거치시기 바랍니다.
+      <p class="pt-2 text-slate-400 text-center sm:text-left">
+        © 홈파인더 (HomeFinder) 부동산 대출 & 정책금융 종합 계산기. All rights reserved.
       </p>
     </div>
+  </footer>
 
-    <p class="pt-2 text-slate-400 text-center sm:text-left">
-      © 대한민국 부동산 대출 & 정책금융 종합 계산기. All rights reserved.
-    </p>
-  </div>
-</footer>
-
-<!-- 개인정보처리방침 모달 (애드센스 필수 승인 요건) -->
-<div id="privacyModal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
-  <div class="bg-white rounded-2xl max-w-xl w-full p-6 max-h-[85vh] overflow-y-auto space-y-4 text-xs text-slate-700">
-    <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-      <h3 class="text-base font-bold text-slate-900">개인정보처리방침 (Privacy Policy)</h3>
-      <button onclick="closeModal('privacyModal')" class="text-slate-400 hover:text-slate-600 text-xl font-bold">×</button>
-    </div>
-    <div class="space-y-3 leading-relaxed">
-      <p>본 사이트는 이용자의 개인식별정보(이름, 주민번호, 계좌번호 등)를 서버에 일절 저장하거나 수집하지 않으며, 모든 대출 계산은 이용자의 브라우저 내에서만 안전하게 실행됩니다.</p>
-      <p class="font-bold text-slate-900">1. 쿠키 및 광고 식별자 사용</p>
-      <p>본 사이트는 제3자 제공업체(Google 등)가 사용자의 이전 방문 기록을 바탕으로 관련성 높은 광고를 게재하기 위해 쿠키(Cookie)를 사용할 수 있습니다. Google의 광고 쿠키 사용으로 Google 및 파트너는 인터넷 웹사이트 방문을 토대로 맞춤형 광고를 제공합니다.</p>
-      <p class="font-bold text-slate-900">2. 맞춤설정 광고 선택 해제</p>
-      <p>이용자는 <a href="https://www.google.com/settings/ads" target="_blank" class="text-blue-600 underline">Google 광고 설정</a>을 방문하여 맞춤설정 광고를 사용 중지할 수 있습니다.</p>
-    </div>
-    <div class="text-right pt-3 border-t border-slate-100">
-      <button onclick="closeModal('privacyModal')" class="px-4 py-2 bg-slate-800 text-white rounded-lg font-semibold hover:bg-slate-700">확인 및 닫기</button>
+  <!-- 개인정보처리방침 모달 -->
+  <div id="privacyModal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-6 max-h-[85vh] overflow-y-auto space-y-4 text-xs text-slate-700">
+      <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+        <h3 class="text-base font-bold text-slate-900">개인정보처리방침 (Privacy Policy)</h3>
+        <button type="button" onclick="closeModal('privacyModal')" class="text-slate-400 hover:text-slate-600 text-xl font-bold">×</button>
+      </div>
+      <div class="space-y-3 leading-relaxed">
+        <p>본 사이트는 이용자의 개인식별정보(이름, 주민번호, 계좌번호 등)를 서버에 일절 저장하거나 수집하지 않으며, 모든 대출 계산은 이용자의 브라우저 내에서만 안전하게 실행됩니다.</p>
+        <p class="font-bold text-slate-900">1. 쿠키 및 광고 식별자 사용</p>
+        <p>본 사이트는 제3자 제공업체(Google 등)가 사용자의 이전 방문 기록을 바탕으로 관련성 높은 광고를 게재하기 위해 쿠키(Cookie)를 사용할 수 있습니다. Google의 광고 쿠키 사용으로 맞춤형 광고가 제공될 수 있습니다.</p>
+        <p class="font-bold text-slate-900">2. 맞춤설정 광고 선택 해제</p>
+        <p>이용자는 Google 광고 설정을 방문하여 맞춤설정 광고를 사용 중지할 수 있습니다.</p>
+      </div>
+      <div class="text-right pt-3 border-t border-slate-100">
+        <button type="button" onclick="closeModal('privacyModal')" class="px-4 py-2 bg-slate-800 text-white rounded-lg font-semibold hover:bg-slate-700">확인 및 닫기</button>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- 이용약관 및 면책조항 모달 -->
-<div id="termsModal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
-  <div class="bg-white rounded-2xl max-w-xl w-full p-6 max-h-[85vh] overflow-y-auto space-y-4 text-xs text-slate-700">
-    <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-      <h3 class="text-base font-bold text-slate-900">이용약관 및 면책조항</h3>
-      <button onclick="closeModal('termsModal')" class="text-slate-400 hover:text-slate-600 text-xl font-bold">×</button>
-    </div>
-    <div class="space-y-3 leading-relaxed">
-      <p>1. 본 서비스에서 제공하는 모든 계산 결과 및 정책 금융 진단 정보는 참고용 시뮬레이션 자료입니다.</p>
-      <p>2. 금융당국의 정책 발표 및 개별 은행의 가산금리 정책 변동에 따라 실제 취급 가능 여부는 달라질 수 있으며, 본 사이트의 산출 결과만을 근거로 발생한 부동산 계약 또는 대출 계약상의 손실에 대해 법적 책임을 지지 않습니다.</p>
-    </div>
-    <div class="text-right pt-3 border-t border-slate-100">
-      <button onclick="closeModal('termsModal')" class="px-4 py-2 bg-slate-800 text-white rounded-lg font-semibold hover:bg-slate-700">확인 및 닫기</button>
+  <!-- 이용약관 모달 -->
+  <div id="termsModal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-6 max-h-[85vh] overflow-y-auto space-y-4 text-xs text-slate-700">
+      <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+        <h3 class="text-base font-bold text-slate-900">이용약관 및 면책조항</h3>
+        <button type="button" onclick="closeModal('termsModal')" class="text-slate-400 hover:text-slate-600 text-xl font-bold">×</button>
+      </div>
+      <div class="space-y-3 leading-relaxed">
+        <p>1. 본 서비스에서 제공하는 모든 계산 결과 및 정책 금융 진단 정보는 참고용 시뮬레이션 자료입니다.</p>
+        <p>2. 금융당국의 정책 변동에 따라 실제 취급 가능 여부는 달라질 수 있으며, 본 사이트의 산출 결과만을 근거로 발생한 부동산 계약 또는 대출 계약상의 손실에 대해 법적 책임을 지지 않습니다.</p>
+      </div>
+      <div class="text-right pt-3 border-t border-slate-100">
+        <button type="button" onclick="closeModal('termsModal')" class="px-4 py-2 bg-slate-800 text-white rounded-lg font-semibold hover:bg-slate-700">확인 및 닫기</button>
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-  function openModal(id) {
-    document.getElementById(id).classList.remove('hidden');
-  }
-  function closeModal(id) {
-    document.getElementById(id).classList.add('hidden');
-  }
-</script>
+  <!-- ========================================== -->
+  <!-- 핵심 계산 및 진단 JavaScript 엔진 전체 탑재 -->
+  <!-- ========================================== -->
+  <script>
+    // 상태 변수
+    let currentRegion = 'metropolitan'; // speculative, metropolitan, province
+    let currentSpecialType = 'firstHome'; // firstHome, newlywed, newborn, youth, general
+    let donutChartInstance = null;
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    function formatKoreanMoney(valInManwon) {
+      if (isNaN(valInManwon) || valInManwon <= 0) return '0원';
+      const eok = Math.floor(valInManwon / 10000);
+      const man = Math.round(valInManwon % 10000);
+      if (eok > 0 && man > 0) return `${eok.toLocaleString()}억 ${man.toLocaleString()}만원`;
+      if (eok > 0 && man === 0) return `${eok.toLocaleString()}억원`;
+      return `${man.toLocaleString()}만원`;
+    }
+
+    function setRegion(regionKey) {
+      currentRegion = regionKey;
+      ['speculative', 'metropolitan', 'province'].forEach(r => {
+        const btn = document.getElementById(`reg-${r}`);
+        if (r === regionKey) {
+          btn.className = 'region-btn border-2 border-blue-600 bg-blue-50/50 rounded-xl p-2.5 text-center transition';
+          btn.querySelector('p:first-child').className = 'font-bold text-xs text-blue-900';
+        } else {
+          btn.className = 'region-btn border-2 border-slate-200 hover:border-blue-400 rounded-xl p-2.5 text-center transition';
+          btn.querySelector('p:first-child').className = 'font-bold text-xs text-slate-800';
+        }
+      });
+      recalculate();
+    }
+
+    function setSpecialType(typeKey) {
+      currentSpecialType = typeKey;
+      ['firstHome', 'newlywed', 'newborn', 'youth', 'general'].forEach(t => {
+        const btn = document.getElementById(`type-${t}`);
+        if (!btn) return;
+        if (t === typeKey) {
+          btn.className = 'type-btn border-2 border-indigo-500 bg-indigo-50/60 rounded-xl p-2.5 text-left transition' + (t === 'general' ? ' sm:col-span-2' : '');
+          btn.querySelector('span:first-child').className = 'font-bold text-xs text-indigo-950';
+        } else {
+          btn.className = 'type-btn border-2 border-slate-200 hover:border-indigo-300 rounded-xl p-2.5 text-left transition' + (t === 'general' ? ' sm:col-span-2' : '');
+          btn.querySelector('span:first-child').className = 'font-bold text-xs text-slate-800';
+        }
+      });
+      recalculate();
+    }
+
+    function onPriceChange() {
+      const val = parseFloat(document.getElementById('input-house-price').value) || 0;
+      document.getElementById('label-house-price').innerText = formatKoreanMoney(val);
+      recalculate();
+    }
+
+    function addHousePrice(amount) {
+      const input = document.getElementById('input-house-price');
+      input.value = (parseFloat(input.value) || 0) + amount;
+      onPriceChange();
+    }
+
+    function resetHousePrice(amount) {
+      const input = document.getElementById('input-house-price');
+      input.value = amount;
+      onPriceChange();
+    }
+
+    function onIncomeChange() {
+      const val = parseFloat(document.getElementById('input-annual-income').value) || 0;
+      document.getElementById('label-annual-income').innerText = formatKoreanMoney(val);
+      recalculate();
+    }
+
+    function setIncome(amount) {
+      document.getElementById('input-annual-income').value = amount;
+      onIncomeChange();
+    }
+
+    function onExistingDebtChange() {
+      const val = parseFloat(document.getElementById('input-existing-annual-repay').value) || 0;
+      document.getElementById('label-existing-debt').innerText = `연 ${formatKoreanMoney(val)}`;
+      recalculate();
+    }
+
+    function setExistingDebt(amount) {
+      document.getElementById('input-existing-annual-repay').value = amount;
+      onExistingDebtChange();
+    }
+
+    function applyPreset(presetType) {
+      if (presetType === 'firstHome') {
+        setRegion('metropolitan');
+        setSpecialType('firstHome');
+        resetHousePrice(50000);
+        setIncome(4500);
+        setExistingDebt(0);
+        document.querySelector('input[name="homeCount"][value="0"]').checked = true;
+        document.getElementById('select-loan-term').value = '40';
+      } else if (presetType === 'newlywed') {
+        setRegion('metropolitan');
+        setSpecialType('newlywed');
+        resetHousePrice(80000);
+        setIncome(8500);
+        setExistingDebt(300);
+        document.querySelector('input[name="homeCount"][value="0"]').checked = true;
+        document.getElementById('select-loan-term').value = '30';
+      } else if (presetType === 'gangnam') {
+        setRegion('speculative');
+        setSpecialType('general');
+        resetHousePrice(150000);
+        setIncome(12000);
+        setExistingDebt(500);
+        document.querySelector('input[name="homeCount"][value="0"]').checked = true;
+        document.getElementById('select-loan-term').value = '30';
+      }
+      recalculate();
+    }
+
+    // 주담대 DSR 최대 대출 원금 역산 함수
+    function calculateMaxPrincipalForDSR(annualCapacity, annualRatePct, years) {
+      if (annualCapacity <= 0) return 0;
+      const r = (annualRatePct / 100) / 12;
+      const n = years * 12;
+      const monthlyPmt = annualCapacity / 12;
+      const principal = monthlyPmt * (Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n));
+      return Math.floor(principal);
+    }
+
+    // 상환 방식별 계산
+    function calculateRepaymentDetails(P, annualRatePct, years, method) {
+      const n = years * 12;
+      const r = (annualRatePct / 100) / 12;
+      let firstMonthRepay = 0;
+      let firstMonthPrincipal = 0;
+      let firstMonthInterest = 0;
+      let totalInterest = 0;
+      let schedule = [];
+
+      let balance = P;
+
+      if (method === 'equalPI') {
+        const monthlyPmt = P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        firstMonthRepay = monthlyPmt;
+        firstMonthInterest = balance * r;
+        firstMonthPrincipal = monthlyPmt - firstMonthInterest;
+        totalInterest = (monthlyPmt * n) - P;
+
+        let curBal = P;
+        let yearPmt = 0, yearPrin = 0, yearInt = 0;
+        for (let m = 1; m <= n; m++) {
+          const intr = curBal * r;
+          const prin = monthlyPmt - intr;
+          curBal -= prin;
+          yearPmt += monthlyPmt;
+          yearPrin += prin;
+          yearInt += intr;
+
+          if (m % 12 === 0) {
+            const yr = m / 12;
+            schedule.push({ year: yr, payment: yearPmt, principal: yearPrin, interest: yearInt, balance: Math.max(0, curBal) });
+            yearPmt = 0; yearPrin = 0; yearInt = 0;
+          }
+        }
+      } else if (method === 'equalP') {
+        const monthlyPrin = P / n;
+        firstMonthPrincipal = monthlyPrin;
+        firstMonthInterest = P * r;
+        firstMonthRepay = firstMonthPrincipal + firstMonthInterest;
+        totalInterest = ((P * r) + (monthlyPrin * r)) * n / 2;
+
+        let curBal = P;
+        let yearPmt = 0, yearPrin = 0, yearInt = 0;
+        for (let m = 1; m <= n; m++) {
+          const intr = curBal * r;
+          const pmt = monthlyPrin + intr;
+          curBal -= monthlyPrin;
+          yearPmt += pmt;
+          yearPrin += monthlyPrin;
+          yearInt += intr;
+
+          if (m % 12 === 0) {
+            const yr = m / 12;
+            schedule.push({ year: yr, payment: yearPmt, principal: yearPrin, interest: yearInt, balance: Math.max(0, curBal) });
+            yearPmt = 0; yearPrin = 0; yearInt = 0;
+          }
+        }
+      } else {
+        // 만기일시상환
+        firstMonthInterest = P * r;
+        firstMonthPrincipal = 0;
+        firstMonthRepay = firstMonthInterest;
+        totalInterest = (P * (annualRatePct / 100)) * years;
+
+        for (let yr = 1; yr <= years; yr++) {
+          const annualInt = P * (annualRatePct / 100);
+          schedule.push({
+            year: yr,
+            payment: yr === years ? annualInt + P : annualInt,
+            principal: yr === years ? P : 0,
+            interest: annualInt,
+            balance: yr === years ? 0 : P
+          });
+        }
+      }
+
+      return {
+        firstMonthRepay: Math.round(firstMonthRepay),
+        firstMonthPrincipal: Math.round(firstMonthPrincipal),
+        firstMonthInterest: Math.round(firstMonthInterest),
+        totalInterest: Math.round(totalInterest),
+        totalRepay: Math.round(P + totalInterest),
+        schedule: schedule
+      };
+    }
+
+    // 도넛 차트 업데이트
+    function updateChart(principal, interest) {
+      const ctx = document.getElementById('repayDonutChart').getContext('2d');
+      if (donutChartInstance) {
+        donutChartInstance.destroy();
+      }
+      donutChartInstance = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['대출원금', '총 이자'],
+          datasets: [{
+            data: [principal, interest],
+            backgroundColor: ['#2563eb', '#f59e0b'],
+            borderWidth: 0,
+            hoverOffset: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return `${context.label}: ${formatKoreanMoney(context.raw)}`;
+                }
+              }
+            }
+          },
+          cutout: '70%'
+        }
+      });
+    }
+
+    // 종합 재계산 함수
+    function recalculate() {
+      const housePrice = parseFloat(document.getElementById('input-house-price').value) || 0;
+      const annualIncome = parseFloat(document.getElementById('input-annual-income').value) || 0;
+      const existingAnnualRepay = parseFloat(document.getElementById('input-existing-annual-repay').value) || 0;
+      const loanTerm = parseInt(document.getElementById('select-loan-term').value) || 30;
+      const baseRate = parseFloat(document.getElementById('input-interest-rate').value) || 3.9;
+      const homeCount = parseInt(document.querySelector('input[name="homeCount"]:checked').value) || 0;
+      const housingType = document.getElementById('select-housing-type').value;
+      const areaSize = document.getElementById('select-area-size').value;
+      const isStressDSR = document.getElementById('check-stress-dsr').checked;
+      const repayMethod = document.querySelector('input[name="repayMethod"]:checked').value;
+
+      // 1. LTV 한도 산출
+      let ltvPct = 70;
+      let ltvCap = Infinity;
+      let ltvNote = '';
+
+      if (homeCount >= 2) {
+        if (currentRegion === 'speculative') {
+          ltvPct = 0;
+          ltvNote = '규제지역 내 다주택자 대출 불가 (LTV 0%)';
+        } else {
+          ltvPct = 60;
+          ltvNote = '비규제지역 다주택자 (LTV 60%)';
+        }
+      } else if (homeCount === 1) {
+        if (currentRegion === 'speculative') {
+          ltvPct = 30;
+          ltvNote = '규제지역 1주택 보유/처분조건 (LTV 30%)';
+        } else {
+          ltvPct = 60;
+          ltvNote = '비규제지역 1주택 갈아타기 (LTV 60%)';
+        }
+      } else {
+        if (currentSpecialType === 'firstHome') {
+          ltvPct = 80;
+          ltvCap = 60000; // 생애최초 6억원 한도
+          ltvNote = '생애최초 구입자 우대 (LTV 80%, 상한 6억원)';
+        } else {
+          if (currentRegion === 'speculative') {
+            ltvPct = 50;
+            ltvNote = '규제지역 무주택 일반 (LTV 50%)';
+          } else {
+            ltvPct = 70;
+            ltvNote = '수도권/지방 비규제 무주택 (LTV 70%)';
+          }
+        }
+      }
+
+      let maxByLTV = Math.floor(housePrice * (ltvPct / 100));
+      if (maxByLTV > ltvCap) maxByLTV = ltvCap;
+      if (ltvPct === 0) maxByLTV = 0;
+
+      // 2. DSR 40% 한도 산출 (스트레스 DSR 포함)
+      let stressAdd = 0;
+      if (isStressDSR) {
+        stressAdd = (currentRegion === 'metropolitan' || currentRegion === 'speculative') ? 1.20 : 0.75;
+      }
+      const dsrRate = baseRate + stressAdd;
+
+      const totalDSRCapacity = annualIncome * 0.40;
+      const availableAnnualForMortgage = Math.max(0, totalDSRCapacity - existingAnnualRepay);
+
+      let maxByDSR = 0;
+      if (availableAnnualForMortgage > 0) {
+        maxByDSR = calculateMaxPrincipalForDSR(availableAnnualForMortgage, dsrRate, loanTerm);
+      }
+
+      // 3. 최종 결정 한도 (LTV vs DSR 병목)
+      let finalLoan = Math.min(maxByLTV, maxByDSR);
+      let bottleneck = 'LTV 한도 제약';
+      if (maxByLTV === 0) {
+        bottleneck = '규제지역 다주택 대출 제한';
+      } else if (maxByDSR < maxByLTV) {
+        bottleneck = 'DSR 40% 소득 제약';
+      }
+
+      // UI 반영
+      document.getElementById('final-max-loan').innerText = (Math.floor(finalLoan)).toLocaleString();
+      const reqCash = Math.max(0, housePrice - finalLoan);
+      document.getElementById('required-cash').innerText = formatKoreanMoney(reqCash);
+
+      document.getElementById('stat-ltv-percent').innerText = ltvPct;
+      document.getElementById('stat-ltv-amount').innerText = formatKoreanMoney(maxByLTV);
+      document.getElementById('stat-ltv-note').innerText = ltvNote;
+      document.getElementById('bar-ltv').style.width = `${Math.min(100, ltvPct)}%`;
+
+      document.getElementById('stat-dsr-amount').innerText = formatKoreanMoney(maxByDSR);
+      document.getElementById('stat-dsr-note').innerText = `스트레스 DSR 금리 ${dsrRate.toFixed(2)}% 적용`;
+      const dsrBarPct = housePrice > 0 ? Math.min(100, Math.round((maxByDSR / housePrice) * 100)) : 0;
+      document.getElementById('bar-dsr').style.width = `${dsrBarPct}%`;
+
+      document.getElementById('bottleneck-badge').innerText = bottleneck;
+
+      // 규제 알림 박스
+      const alertBox = document.getElementById('regulatory-alert-box');
+      const alertText = document.getElementById('regulatory-alert-text');
+      if (homeCount >= 2 && currentRegion === 'speculative') {
+        alertBox.className = 'mt-4 p-3 rounded-xl text-xs flex items-start gap-2 bg-rose-50 text-rose-700 border border-rose-200';
+        alertText.innerText = '강남3구 및 용산구는 2주택 이상 다주택자의 신규 주택담보대출 취급이 전면 금지되어 있습니다.';
+      } else if (existingAnnualRepay > totalDSRCapacity) {
+        alertBox.className = 'mt-4 p-3 rounded-xl text-xs flex items-start gap-2 bg-amber-50 text-amber-800 border border-amber-200';
+        alertText.innerText = '기존 대출 원리금이 연소득 DSR 40% 한도를 이미 초과하여 신규 주택담보대출 한도가 0원으로 제한됩니다.';
+      } else {
+        alertBox.className = 'mt-4 p-3 rounded-xl text-xs flex items-start gap-2 bg-slate-100 text-slate-700';
+        alertText.innerText = `현재 선택 기준 정상 산출되었습니다. (LTV: ${ltvPct}%, DSR 규제비율: 40%)`;
+      }
+
+      // 4. 상환액 및 세부 납입금 계산 (실제 적용 기본금리 기준)
+      document.getElementById('stat-active-rate').innerText = `연 ${baseRate.toFixed(2)}%`;
+      const repayDetails = calculateRepaymentDetails(finalLoan, baseRate, loanTerm, repayMethod);
+
+      document.getElementById('val-first-month-repay').innerText = formatKoreanMoney(repayDetails.firstMonthRepay);
+      document.getElementById('val-first-month-detail').innerText = `원금 ${formatKoreanMoney(repayDetails.firstMonthPrincipal)} + 이자 ${formatKoreanMoney(repayDetails.firstMonthInterest)}`;
+      document.getElementById('val-total-interest').innerText = formatKoreanMoney(repayDetails.totalInterest);
+      document.getElementById('val-total-repay').innerText = formatKoreanMoney(repayDetails.totalRepay);
+
+      const totalSum = finalLoan + repayDetails.totalInterest;
+      const prinPct = totalSum > 0 ? ((finalLoan / totalSum) * 100).toFixed(1) : 0;
+      const intPct = totalSum > 0 ? ((repayDetails.totalInterest / totalSum) * 100).toFixed(1) : 0;
+      document.getElementById('chart-legend-principal').innerText = `${formatKoreanMoney(finalLoan)} (${prinPct}%)`;
+      document.getElementById('chart-legend-interest').innerText = `${formatKoreanMoney(repayDetails.totalInterest)} (${intPct}%)`;
+
+      updateChart(finalLoan, repayDetails.totalInterest);
+
+      // 5. 상환 스케줄 테이블 채우기
+      const tbody = document.getElementById('schedule-table-body');
+      tbody.innerHTML = '';
+      const displayYears = [1, 2, 3, 5, loanTerm];
+      const uniqueYears = [...new Set(displayYears)].filter(y => y <= loanTerm);
+
+      repayDetails.schedule.forEach(row => {
+        if (uniqueYears.includes(row.year)) {
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-slate-50 transition';
+          tr.innerHTML = `
+            <td class="py-2.5 px-3 font-bold text-slate-800">${row.year}년차 ${row.year === loanTerm ? '(만기)' : ''}</td>
+            <td class="py-2.5 px-3">${Math.round(row.payment).toLocaleString()}</td>
+            <td class="py-2.5 px-3 text-blue-600">${Math.round(row.principal).toLocaleString()}</td>
+            <td class="py-2.5 px-3 text-amber-600">${Math.round(row.interest).toLocaleString()}</td>
+            <td class="py-2.5 px-3 text-right font-bold text-slate-900">${Math.round(row.balance).toLocaleString()}</td>
+          `;
+          tbody.appendChild(tr);
+        }
+      });
+
+      // 6. 정책 대출 진단 렌더링
+      diagnosePolicies(housePrice, annualIncome, homeCount, areaSize);
+      lucide.createIcons();
+    }
+
+    // 정부 정책 모기지 진단 로직
+    function diagnosePolicies(price, income, homeCount, areaSize) {
+      const container = document.getElementById('policy-products-list');
+      container.innerHTML = '';
+
+      const policies = [
+        {
+          id: 'newborn',
+          name: '신생아 특례 디딤돌 대출',
+          dept: '국토교통부 · HUG (주택도시기금)',
+          rate: '연 1.60% ~ 3.30%',
+          maxLimit: '최대 5억원 (LTV 80% 생애최초 / 70% 일반)',
+          check: () => {
+            const reasons = [];
+            if (currentSpecialType !== 'newborn') reasons.push('2년 내 출산/입양 가구 전용');
+            if (homeCount > 1) reasons.push('무주택자 또는 1주택 처분조건만 가능');
+            if (price > 90000) reasons.push('주택 가격 9억원 이하만 가능 (현재 초과)');
+            if (income > 13000) reasons.push('부부합산 연소득 1.3억원 이하 요건 미충족');
+            if (areaSize === 'over85') reasons.push('전용면적 85㎡ 이하만 지원 가능');
+            return { ok: reasons.length === 0, reasons };
+          }
+        },
+        {
+          id: 'didimdol',
+          name: '내집마련 디딤돌 대출',
+          dept: 'HUG & 한국주택금융공사',
+          rate: '연 2.65% ~ 3.95%',
+          maxLimit: '최대 2.5억 ~ 4억원 (신혼 4억, 생애최초 3억)',
+          check: () => {
+            const reasons = [];
+            if (homeCount > 0) reasons.push('세대원 전원 무주택자만 가능');
+            const maxPrice = currentSpecialType === 'newlywed' ? 60000 : 50000;
+            if (price > maxPrice) reasons.push(`주택가격 ${maxPrice/10000}억원 이하 요건 초과`);
+            
+            let incomeLimit = 6000;
+            if (currentSpecialType === 'newlywed') incomeLimit = 8500;
+            else if (currentSpecialType === 'firstHome') incomeLimit = 7000;
+            if (income > incomeLimit) reasons.push(`부부합산 소득 ${incomeLimit/100}만원 상한 초과`);
+            if (areaSize === 'over85') reasons.push('국민주택규모(85㎡) 이하만 취급');
+            return { ok: reasons.length === 0, reasons };
+          }
+        },
+        {
+          id: 'bogeumjari',
+          name: 'HF 보금자리론 (고정금리)',
+          dept: '한국주택금융공사 (HF)',
+          rate: '연 3.95% ~ 4.25% (우대금리 별도)',
+          maxLimit: '최대 3.6억 ~ 4.2억원 (생애최초 4.2억)',
+          check: () => {
+            const reasons = [];
+            if (price > 60000) reasons.push('주택가격 6억원 이하 대상 (현재 6억 초과)');
+            if (homeCount > 1) reasons.push('무주택 또는 1주택(처분조건)만 가능');
+            const incLimit = currentSpecialType === 'newlywed' ? 8500 : 7000;
+            if (income > incLimit) reasons.push(`소득 한도 (${incLimit/100}만원) 초과`);
+            return { ok: reasons.length === 0, reasons };
+          }
+        }
+      ];
+
+      policies.forEach(p => {
+        const result = p.check();
+        const card = document.createElement('div');
+        card.className = `p-4 rounded-xl border transition ${result.ok ? 'bg-emerald-50/40 border-emerald-300' : 'bg-slate-50 border-slate-200'}`;
+        
+        card.innerHTML = `
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <div class="flex items-center gap-2">
+                <h5 class="font-bold text-slate-900 text-sm">${p.name}</h5>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${result.ok ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-200 text-slate-600'}">
+                  ${result.ok ? '적격 (신청 가능)' : '신청 조건 미충족'}
+                </span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-0.5">${p.dept} · 예상금리: <strong class="text-blue-700">${p.rate}</strong></p>
+            </div>
+            <span class="text-xs font-semibold text-slate-700 sm:text-right">${p.maxLimit}</span>
+          </div>
+          ${!result.ok ? `
+            <div class="mt-2 pt-2 border-t border-slate-200/60 text-[11px] text-rose-600 space-y-0.5">
+              ${result.reasons.map(r => `<div>• ${r}</div>`).join('')}
+            </div>
+          ` : `
+            <div class="mt-2 pt-2 border-t border-emerald-200/60 text-[11px] text-emerald-700 font-medium">
+              ✓ DSR 규제 면제 또는 우대금리 적용 대상입니다. 관할 기금 포털이나 수탁은행 창구에서 우선 조회를 권장합니다.
+            </div>
+          `}
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // 초기 실행
+    window.addEventListener('DOMContentLoaded', () => {
+      onPriceChange();
+      onIncomeChange();
+      onExistingDebtChange();
+      recalculate();
+      lucide.createIcons();
+    });
+  </script>
 </body>
 </html>
